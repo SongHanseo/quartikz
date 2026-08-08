@@ -30,7 +30,7 @@ export default defineConfig({
   splitting: false,
   outDir: "dist",
   platform: "node",
-  noExternal: [/.*/],
+  noExternal: [/^(?!rehype-tikzjax)/],
   external: ["rehype-tikzjax", ...SINGLETON_EXTERNALS],
   banner: {
     js: 'import { createRequire } from "module"; const require = createRequire(import.meta.url);',
