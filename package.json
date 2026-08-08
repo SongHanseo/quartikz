@@ -2,7 +2,8 @@
   "name": "quartikz",
   "version": "0.1.0",
   "description": "build time tikz render plugin for quartz 5",
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc"
   },
@@ -16,5 +17,45 @@
   },
   "devDependencies": {
     "typescript": "^7.0.2"
+  },
+  "quartz": {
+    "name": "quartikz",
+    "displayName": "Quartikz",
+    "category": "transformer",
+    "version": "0.1.0",
+    "quartzVersion": ">=5.0.0",
+    "dependencies": [],
+    "defaultOrder": 19,
+    "defaultEnabled": true,
+    "defaultOptions": {"showConsole":true, "embedFontCss":true},
+    "optionSchema": {
+      "showConsole" : {
+        "type": "boolean"
+      },
+      "texPackages": {
+        "type": "array"
+      },
+      "tikzLibraries": {
+        "type": "string"
+      },
+      "tikzOptions": {
+        "type": "string"
+      },
+      "addToPreamble": {
+        "type": "string"
+      },
+      "embedFontCss": {
+        "type": "boolean"
+      },
+      "fontCssUrl": {
+        "type": "string"
+      },
+      "disableOptimize": {
+        "type": "boolean"
+      },
+      "disableSanitize": {
+        "type": "boolean"
+      }
+    }
   }
 }
