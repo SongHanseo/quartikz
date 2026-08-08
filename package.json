@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "tsup"
   },
   "keywords": [],
   "author": "Song Hanseo",
@@ -16,7 +16,8 @@
     "rehype-tikzjax": "^0.1.0"
   },
   "devDependencies": {
-    "typescript": "^7.0.2"
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3"
   },
   "quartz": {
     "name": "quartikz",
@@ -27,9 +28,12 @@
     "dependencies": [],
     "defaultOrder": 19,
     "defaultEnabled": true,
-    "defaultOptions": {"showConsole":true, "embedFontCss":true},
+    "defaultOptions": {
+      "showConsole": true,
+      "embedFontCss": true
+    },
     "optionSchema": {
-      "showConsole" : {
+      "showConsole": {
         "type": "boolean"
       },
       "texPackages": {
