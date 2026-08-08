@@ -1,0 +1,20 @@
+{
+  "name": "quartikz",
+  "version": "0.1.0",
+  "description": "build time tikz render plugin for quartz 5",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "Song Hanseo",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@quartz-community/types": "^0.3.0",
+    "rehype-tikzjax": "^0.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
