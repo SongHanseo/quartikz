@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup && cp node_modules/jsdom/lib/jsdom/living/xhr/xhr-sync-worker.js dist/ && mkdir -p dist/tex && cp node_modules/node-tikzjax/tex/* dist/tex/"
+    "build": "tsup"
   },
   "keywords": [],
   "author": "Song Hanseo",
@@ -19,12 +19,16 @@
     "tsup": "^8.5.1",
     "typescript": "^6.0.3"
   },
+  "peerDependencies": {
+    "rehype-tikzjax": "^0.1.0"
+  },
   "quartz": {
     "name": "quartikz",
     "displayName": "Quartikz",
     "category": "transformer",
     "version": "0.1.0",
     "quartzVersion": ">=5.0.0",
+    "requiresInstall": true,
     "dependencies": [],
     "defaultOrder": 19,
     "defaultEnabled": true,

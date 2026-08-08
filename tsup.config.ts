@@ -31,7 +31,7 @@ export default defineConfig({
   outDir: "dist",
   platform: "node",
   noExternal: [/.*/],
-  external: SINGLETON_EXTERNALS,
+  external: ["rehype-tikzjax", ...SINGLETON_EXTERNALS],
   banner: {
     js: 'import { createRequire } from "module"; const require = createRequire(import.meta.url);',
   },
