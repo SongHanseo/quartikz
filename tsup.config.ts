@@ -16,6 +16,7 @@ const SINGLETON_EXTERNALS = [
 ];
 
 export default defineConfig({
+  shims: true,
   entry: {
     index: "src/index.ts",
   },
