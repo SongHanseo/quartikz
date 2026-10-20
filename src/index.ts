@@ -1,9 +1,9 @@
-import type { TeXOptions, SvgOptions } from 'node-tikzjax';
+import type { RehypeTikzjaxOptions } from 'rehype-tikzjax';
 import type { QuartzTransformerPlugin } from "@quartz-community/types";
 
 import rehypeTikzjax from "rehype-tikzjax";
 
-type Options = TeXOptions & SvgOptions;
+type Options = RehypeTikzjaxOptions;
 
 export const Quartikz: QuartzTransformerPlugin<Options> = (options?: Options) => {
   return {

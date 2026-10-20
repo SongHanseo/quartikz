@@ -1,6 +1,6 @@
 {
   "name": "quartikz",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "build time tikz render plugin for quartz 5",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -13,35 +13,58 @@
   "type": "module",
   "dependencies": {
     "@quartz-community/types": "^0.3.0",
-    "rehype-tikzjax": "^0.1.1"
+    "rehype-tikzjax": "^0.1.2"
   },
   "devDependencies": {
     "tsup": "^8.5.1",
     "typescript": "^6.0.3"
   },
   "peerDependencies": {
-    "rehype-tikzjax": "^0.1.1"
+    "rehype-tikzjax": "^0.1.2"
   },
   "quartz": {
     "name": "quartikz",
     "displayName": "Quartikz",
     "category": "transformer",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "quartzVersion": ">=5.0.0",
     "requiresInstall": true,
     "dependencies": [],
     "defaultOrder": 19,
     "defaultEnabled": true,
     "defaultOptions": {
-      "showConsole": true,
-      "embedFontCss": true
+      "className": "tikz-diagram",
+      "removeBlankLines": true,
+      "onError": "skip",
+      "showConsole": false,
+      "texPackages": {},
+      "tikzLibraries": "",
+      "tikzOptions": "",
+      "addToPreamble": "",
+      "embedFontCss": true,
+      "fontCssUrl": "",
+      "disableOptimize": false,
+      "disableSanitize": false
     },
     "optionSchema": {
+      "className": {
+        "type": "string",
+        "description": "Custom CSS class name to add to the rendered SVG node."
+      },
+      "removeBlankLines": {
+        "type": "boolean",
+        "description": "Whether to remove blank lines in the TikZ code to prevent rendering errors."
+      },
+      "onError": {
+        "type": "enum",
+        "values": ["skip", "throw"],
+        "description": "Error handling behavior on rendering failure (skip: ignore and keep the original code block, throw: throw an error and halt the build)."
+      },
       "showConsole": {
         "type": "boolean"
       },
       "texPackages": {
-        "type": "array"
+        "type": "object"
       },
       "tikzLibraries": {
         "type": "string"
