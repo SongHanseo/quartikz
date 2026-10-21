@@ -42,7 +42,7 @@
       "tikzOptions": "",
       "addToPreamble": "",
       "embedFontCss": true,
-      "fontCssUrl": "",
+      "fontCssUrl": "https://cdn.jsdelivr.net/npm/node-tikzjax@latest/css/fonts.css",
       "disableOptimize": false,
       "disableSanitize": false
     },
